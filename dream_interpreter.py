@@ -94,7 +94,7 @@ async def display_description_form1():
             form1.warning("Please enter the details or description of your dream.")
       
 
-async def display_interpretation3():
+async def display_interpretation3(possible_genre, description, current_life):
     form3 = st.form("Dream Interpretation")
     
     description = st.session_state["description"]
