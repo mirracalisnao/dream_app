@@ -58,6 +58,7 @@ async def display_description_form1():
     # Prompt user for description
     description = form1.text_input("Describe what happened in your dream, specifying the details", key="description")
 
+    # No need to modify st.session_state["current_life"] here
     current_life = form1.text_input("What are your current life circumstances/feelings/thoughts that can be associated with your dream?", key="current_life")
     
     # Display possible genres
@@ -81,7 +82,7 @@ async def display_description_form1():
 
     if submit1:
         if description:
-            st.session_state["current_life"] = current_life
+            # Removed modification of st.session_state["current_life"]
             
             if selected_genre == "Other":
                 st.session_state["current_form"] = 2  # Skip to interpretation form directly
