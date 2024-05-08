@@ -39,7 +39,7 @@ async def app():
     elif st.session_state["current_form"] == 2:
         await display_interpretation3()
 
-async def display_describe_form1():
+async def display_description_form1():
     form1 = st.form("Introduction")
     form1.subheader("Dream Interpreter")
     
@@ -55,12 +55,12 @@ async def display_describe_form1():
     offering insights and explanations based on psychological principles and cultural references."""
     form1.write(text)
     
-    # Prompt user for description of the dream
-    description = form1.text_input("Describe what happen in your dream, specify the details", key="description")
+    # Prompt user for description
+    description = form1.text_input("Describe what happened in your dream, specifying the details", key="description")
 
-    current_life = form1.number_input("What is your current life circumstances/feelings/thoughts that can be associated in your dream?", key="current_life")
+    current_life = form1.number_input("What are your current life circumstances/feelings/thoughts that can be associated with your dream?", key="current_life")
     
-    # Display possible genre of the dream
+    # Display possible genres
     possible_genre = [
         "Adventure",
         "Nightmare",
@@ -81,20 +81,19 @@ async def display_describe_form1():
 
     if submit1:
         if description:
-            if "description" not in st.session_state:
-                st.session_state["description"] = description
-            if "current_life" not in st.session_state:
-                st.session_state["current_life"] = current_life
-            if selected_genre == "Other (Specify)":
-                st.session_state["current_form"] = 2  # Skip to genre information form directly
+            st.session_state["description"] = description
+            st.session_state["current_life"] = current_life
+            
+            if selected_genre == "Other":
+                st.session_state["current_form"] = 2  # Skip to interpretation form directly
             else:
-                st.session_state["selected_genre"] = selected_genre  # Save selected genre
-                st.session_state["current_form"] = 2  # Move to the next form
-            await display_interpretation3(possible_genre, description, current_life)  # Call the display_information3 function directly
+                st.session_state["selected_genre"] = selected_genre
+                st.session_state["current_form"] = 2  # Move to the interpretation form
+            await display_interpretation3(possible_genre, description, current_life)  # Call the interpretation form
         else:
             form1.warning("Please enter the details or description of your dream.")       
 
-async def display_interpretation3(possible_genre, description, current_life):
+async def display_interpretation3():
     form3 = st.form("Dream Interpretation")
     
     description = st.session_state["description"]
@@ -118,7 +117,7 @@ async def display_interpretation3(possible_genre, description, current_life):
         # Simulate some time-consuming task (e.g., sleep)
         time.sleep(0.01)
     # Progress bar reaches 100% after the loop completes
-    form3.success("AI research co-pilot task completed!") 
+    form3.success("Dream interpretation completed!") 
 
     done = form3.form_submit_button("Done")  # Add the submit button
     if done:
