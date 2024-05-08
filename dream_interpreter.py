@@ -39,7 +39,7 @@ async def app():
     elif st.session_state["current_form"] == 2:
         await display_interpretation3()
 
-async def display_symptoms_form1():
+async def display_describe_form1():
     form1 = st.form("Introduction")
     form1.subheader("Dream Interpreter")
     
@@ -55,12 +55,12 @@ async def display_symptoms_form1():
     offering insights and explanations based on psychological principles and cultural references."""
     form1.write(text)
     
-    # Prompt user for symptoms
+    # Prompt user for description of the dream
     description = form1.text_input("Describe what happen in your dream, specify the details", key="description")
 
     current_life = form1.number_input("What is your current life circumstances/feelings/thoughts that can be associated in your dream?", key="current_life")
     
-    # Display possible medications
+    # Display possible genre of the dream
     possible_genre = [
         "Adventure",
         "Nightmare",
@@ -80,15 +80,15 @@ async def display_symptoms_form1():
     submit1 = form1.form_submit_button("Submit")
 
     if submit1:
-        if symptoms:
-            if "symptoms" not in st.session_state:
+        if description:
+            if "description" not in st.session_state:
                 st.session_state["description"] = description
-            if "age" not in st.session_state:
+            if "current_life" not in st.session_state:
                 st.session_state["current_life"] = current_life
             if selected_genre == "Other (Specify)":
-                st.session_state["current_form"] = 2  # Skip to medication information form directly
+                st.session_state["current_form"] = 2  # Skip to genre information form directly
             else:
-                st.session_state["selected_genre"] = selected_genre  # Save selected medication
+                st.session_state["selected_genre"] = selected_genre  # Save selected genre
                 st.session_state["current_form"] = 2  # Move to the next form
             await display_interpretation3(possible_genre, description, current_life)  # Call the display_information3 function directly
         else:
