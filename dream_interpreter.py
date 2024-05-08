@@ -81,7 +81,6 @@ async def display_description_form1():
 
     if submit1:
         if description:
-            st.session_state["description"] = description
             st.session_state["current_life"] = current_life
             
             if selected_genre == "Other":
@@ -91,7 +90,8 @@ async def display_description_form1():
                 st.session_state["current_form"] = 2  # Move to the interpretation form
             await display_interpretation3(possible_genre, description, current_life)  # Call the interpretation form
         else:
-            form1.warning("Please enter the details or description of your dream.")      
+            form1.warning("Please enter the details or description of your dream.")
+      
 
 async def display_interpretation3():
     form3 = st.form("Dream Interpretation")
