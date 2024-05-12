@@ -50,7 +50,7 @@ async def display_description_form1():
     West Visayas State University"""
     form1.text(text)
 
-    form1.image("dream_ai.png", caption="Dream Interpreter App", use_column_width=True)
+    form1.image("dream_ai.png", caption="Dream AI-chemyst", use_column_width=True)
     text = """An AI-driven dream interpreter designed to help users explore the meanings and symbolism behind their dreams, 
     offering insights and explanations based on psychological principles and cultural references."""
     form1.write(text)
@@ -95,7 +95,7 @@ async def display_description_form1():
       
 
 async def display_interpretation3(possible_genre, description, current_life):
-    form3 = st.form("Dream Interpretation")
+    form3 = st.form("Dream AI-chemyst")
     
     description = st.session_state["description"]
     current_life = st.session_state["current_life"]
