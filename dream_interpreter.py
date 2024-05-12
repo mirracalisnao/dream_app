@@ -41,7 +41,7 @@ async def app():
 
 async def display_description_form1():
     form1 = st.form("Introduction")
-    form1.subheader("Dream Interpreter")
+    form1.subheader("DREAM AI-CHEMYST")
     
     text = """Cherry Mirra Calisnao     BSCS 3A \n
     CCS 229 - Intelligent Systems \n
@@ -73,12 +73,11 @@ async def display_description_form1():
         "Mystery",
         "Historical",
         "Comedy",
-        "Other",
     ]
 
     selected_genre = form1.selectbox("Select the genre of your dream:", options=possible_genre)
 
-    submit1 = form1.form_submit_button("Submit")
+    submit1 = form1.form_submit_button("Show Interpretation")
 
     if submit1:
         if description:
@@ -105,7 +104,7 @@ async def display_interpretation3(possible_genre, description, current_life):
     form3.write(f"Current Life: {current_life}")
     form3.write(f"Selected Genre: {selected_genre}")
     
-    question = f"Provide insights and explanations based on the {description} of the dream, {current_life} circumstances, and {selected_genre}. Interpret the symbolism, psychology, and cultural references within the dream."
+    question = f"Provide insights and explanations based on the {description} of the dream, {current_life} circumstances, and {selected_genre}. Interpret the symbolism, psychology,cultural references within the dream and how it was related in real life."
     progress_bar = form3.progress(0, text="The AI co-pilot is processing the request, please wait...")
     response = await generate_response(question, context)
     form3.write("Dream Interpretation:")
