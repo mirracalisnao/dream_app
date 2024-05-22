@@ -25,12 +25,12 @@ An AI-driven dream interpreter designed to help users explore the meanings and s
 
 
 ## Demo 🎥
-[Dream AI-Chemyst App](https://drive.google.com/file/d/1-NuPxGMal0G9Sy3_HhLFvHhJUYxQkEVl/view?usp=sharing)
- ---
+ [Dream AI-Chemyst App](https://drive.google.com/file/d/1-NuPxGMal0G9Sy3_HhLFvHhJUYxQkEVl/view?usp=sharing)
+ 
 
 ## Streamlit App Link 🔗
-[Dream AI-Chemyst App](https://dreamapp-calisnao-cs3a.streamlit.app/)
----
+ [Dream AI-Chemyst App](https://dreamapp-calisnao-cs3a.streamlit.app/)
+
 
 ## Submitted by:
 **CALISNAO, CHERRY MIRRA   BSCS 3A**
