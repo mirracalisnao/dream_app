@@ -1,5 +1,5 @@
 # 🌌 Dream AI-Chemyst
-![Dream Interpretation](ddream_ai.png)
+![Dream Interpretation](dream_ai.png)
 
 An AI-driven dream interpreter designed to help users explore the meanings and symbolism behind their dreams, offering insights and explanations based on psychological principles and cultural references.
 
@@ -23,12 +23,12 @@ An AI-driven dream interpreter designed to help users explore the meanings and s
 - **Formatted Output:** The app displays the dream description, life circumstances, selected genre, and the AI-generated interpretation in a formatted manner.
 
 
-
+<br>
 ## 🎥 Demo
 [Dream AI-Chemyst App](https://drive.google.com/file/d/1-NuPxGMal0G9Sy3_HhLFvHhJUYxQkEVl/view?usp=sharing)
 
 
-
+<br>
 ## 👩‍💻 Submitted by:
 **CALISNAO, CHERRY MIRRA**  
 BSCS 3A
