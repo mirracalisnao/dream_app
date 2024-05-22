@@ -23,12 +23,15 @@ An AI-driven dream interpreter designed to help users explore the meanings and s
 - **Formatted Output:** The app displays the dream description, life circumstances, selected genre, and the AI-generated interpretation in a formatted manner.
 
 
-<br>
+
 ## 🎥 Demo
 [Dream AI-Chemyst App](https://drive.google.com/file/d/1-NuPxGMal0G9Sy3_HhLFvHhJUYxQkEVl/view?usp=sharing)
 
 
-<br>
+## Streamlit App Link 🔗
+[Dream AI-Chemyst App](https://dreamapp-calisnao-cs3a.streamlit.app/)
+
+
 ## 👩‍💻 Submitted by:
 **CALISNAO, CHERRY MIRRA**  
 BSCS 3A
